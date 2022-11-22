@@ -8,7 +8,7 @@ public abstract class Animal implements AnimalInterface{
         if (name.length() > 3){
             this.name = name;
         } else {
-            System.out.println("Animal name must be at least 3 letters");
+            System.out.println(getName() + "Animal name must be at least 3 letters");
         }
         this.livingTime = livingTime;
         this.speed = speed;
