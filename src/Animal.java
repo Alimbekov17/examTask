@@ -49,7 +49,7 @@ public abstract class Animal implements AnimalInterface{
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "Animals{" +
                 "name='" + name + '\'' +
                 ", livingTime=" + livingTime +
                 ", speed=" + speed +

@@ -8,7 +8,7 @@ public abstract class Transport implements TransportInterface{
         if (year > 2018){
             this.year = year;
         } else {
-            System.out.println("Transport is old.");
+            System.out.println(getName() + "Transport is old.");
         }
         this.transportType = transportType;
     }
