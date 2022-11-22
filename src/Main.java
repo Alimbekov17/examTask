@@ -58,34 +58,40 @@ public class Main {
         }
     }
     public static void method2(Animal[] animals){
-        for (Animal animal: animals) {
-            animal.run();
-            if (animal.getClass().equals(Horse.class)){
-                animal.eat("Grass");
-                Horse[] horses = {(Horse) animal};
-            } else if (animal.getClass().equals(Tiger.class)){
-                Tiger[] tigers = {(Tiger) animal};
-                animal.eat("Deer");
-            } else if (animal.getClass().equals(Eagle.class)){
-                Eagle[] eagles = {(Eagle) animal};
-                animal.eat("Rabbit");
+        Horse[] horses = new Horse[3];
+        Tiger[] tigers = new Tiger[3];
+        Eagle[] eagles = new Eagle[3];
+        for (int i = 0; i < animals.length; i++){
+            animals[i].run();
+            if (animals[i].getClass().equals(Horse.class)){
+                animals[i].eat("Grass");
+                horses[i] = (Horse) animals[i];
+            } else if (animals[i].getClass().equals(Tiger.class)){
+                tigers[i] = (Tiger) animals[i];
+                animals[i].eat("Deer");
+            } else if (animals[i].getClass().equals(Eagle.class)){
+                eagles[i] = (Eagle) animals[i];
+                animals[i].eat("Rabbit");
             }
         }
     }
     public static void method3(Transport[] transports){
-        for (Transport transport: transports) {
-            if (transport.getClass().equals(Bus.class)){
-                transport.fuelConsumption("diesel", 100);
-                transport.capacity(70);
-                Bus[] buses = {(Bus) transport};
-            } else if (transport.getClass().equals(Boat.class)){
-                transport.fuelConsumption("nafta", 200);
-                transport.capacity(30);
-                Boat[] boats = {(Boat) transport};
-            } else if (transport.getClass().equals(Helicopter.class)){
-                transport.fuelConsumption("kerosene", 300);
-                transport.capacity(20);
-                Helicopter[] helicopters = {(Helicopter) transport};
+        Bus[] buses = new Bus[3];
+        Helicopter[] helicopters = new Helicopter[3];
+        Boat[] boats = new Boat[2];
+        for (int i = 0; i < transports.length; i++) {
+            if (transports[i].getClass().equals(Bus.class)){
+                transports[i].fuelConsumption("diesel", 100);
+                transports[i].capacity(70);
+                buses[i] = (Bus) transports[i];
+            } else if (transports[i].getClass().equals(Boat.class)){
+                transports[i].fuelConsumption("nafta", 200);
+                transports[i].capacity(30);
+                boats[i] = (Boat) transports[i];
+            } else if (transports[i].getClass().equals(Helicopter.class)){
+                transports[i].fuelConsumption("kerosene", 300);
+                transports[i].capacity(20);
+                helicopters[i] = (Helicopter) transports[i];
             }
         }
     }
